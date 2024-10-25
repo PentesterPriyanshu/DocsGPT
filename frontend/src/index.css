@@ -1,29 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --viewport-height: 100vh;
-}
-
-@supports (height: 100dvh) {
-  :root {
-    --viewport-height: 100dvh; /* Use dvh where supported */
-  }
-}
-
-body.dark {
-  background-color: #202124; /* raisin-black */
-}
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.dark ::-webkit-scrollbar-track {
-  background: #2f3036;
-}
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 40px;
