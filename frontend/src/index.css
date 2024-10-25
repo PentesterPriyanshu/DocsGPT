@@ -8,13 +8,14 @@
 
 @supports (height: 100dvh) {
   :root {
-    --viewport-height: 100dvh; /* Use dvh where supported */
+    --viewport-height: 100dvh;
   }
 }
 
 body.dark {
-  background-color: #202124; /* raisin-black */
+  background-color: #202124;
 }
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -35,15 +36,22 @@ body.dark {
   background: #b1afaf;
 }
 
+.scrollbar {
+  scrollbar-color: #888 #f1f1f1;
+  scrollbar-width: thin;
+}
+.dark.scrollbar {
+  scrollbar-color: #b1afaf #2f3036;
+}
+
 @layer utilities {
-  /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
@@ -53,7 +61,7 @@ body.dark {
   }
 
   .table-default th {
-    @apply p-4 w-[244px] font-normal text-gray-400; /* Remove border-r */
+    @apply p-4 w-[244px] font-normal text-gray-400;
   }
 
   .table-default th:last-child {
@@ -61,13 +69,12 @@ body.dark {
   }
 
   .table-default td {
-    @apply border-t border-silver dark:border-silver/40 px-4 py-2; /* Remove border-r */
+    @apply border-t border-silver dark:border-silver/40 px-4 py-2;
   }
 
   .table-default td:last-child {
-    @apply border-r-0; /* Ensure no right border on the last column */
+    @apply border-r-0;
   }
-
 }
 
 
